@@ -1,0 +1,9 @@
+/* Configuración para que babel reconosca los preset agregados */
+{
+    "presets": [
+        /* Permite trabajar con javascript moderno ECMAScript*/
+        "@babel/preset-env",
+        /* Permite trabajar con JSX */
+        "@babel/preset-react"
+    ]
+}
