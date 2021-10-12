@@ -43,14 +43,24 @@ module.exports = {
             },
             {
                 // extensiones css y sass
-                test: /\.s[ac]ss$/i,
+                test: /\.(css|scss)$/,
                 use: [
                     // indicamos los loaders a usar
                     'style-loader',
                     'css-loader',
                     'sass-loader'
                 ]
-
+            },
+            {
+                // extensiones de imagenes
+                test: /\.(png|jp(e*)g|svg|gif)$/,
+                use: [{
+                    // indicamos los loaders a usar
+                    loader: 'file-loader',
+                    options: {
+                        name: 'images/[hash]-[name].[ext]',
+                    },
+                }, ],
             }
         ]
     },
