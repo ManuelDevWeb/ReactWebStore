@@ -10,10 +10,12 @@ module.exports = {
     entry: './src/index.js',
     // lugar al que saldrán todos los archivos
     output: {
-        //en nuestro path, crea la carpeta dist
+        // en nuestro path, crea la carpeta dist
         path: path.resolve(__dirname, 'dist'),
         // nombre del archivo js resultante
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        // indicando que utilizaremos la raiz del path publico
+        publicPath: '/'
     },
     // asignando el modo desarrollo
     mode: 'development',
@@ -81,6 +83,7 @@ module.exports = {
     ],
     // configuracion para el entorno local en modo desarrollo
     devServer: {
+        historyApiFallback: true,
         allowedHosts: path.join(__dirname, 'dist'),
         compress: true,
         port: 3005,
