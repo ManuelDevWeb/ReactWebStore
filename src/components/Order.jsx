@@ -1,10 +1,10 @@
 import React from "react";
 
 // Importando estilos
-import "../styles/Order.scss";
+import "@styles/Order.scss";
 
 // Importando imágenes
-import imgFlecha from '../assets/icons/flechita.svg';
+import imgFlecha from '@icons/flechita.svg';
 
 const Order = () => {
   return (

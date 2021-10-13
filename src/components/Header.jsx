@@ -1,12 +1,12 @@
 import React from "react";
 
 // Importando estilos
-import '../styles/Header.scss';
+import '@styles/Header.scss';
 
 // Importando imágenes
-import imgMenu from '../assets/icons/icon_menu.svg';
-import imgShopping from '../assets/icons/icon_shopping_cart.svg';
-import logo from '../assets/logos/logo_yard_sale.svg';
+import imgMenu from '@icons/icon_menu.svg';
+import imgShopping from '@icons/icon_shopping_cart.svg';
+import logo from '@logos/logo_yard_sale.svg';
 
 const Header = () => {
   return (
@@ -14,7 +14,7 @@ const Header = () => {
       <img src={imgMenu} alt="menu" className="menu" />
 
       <div className="navbar-left">
-        <img src={logo} alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="nav-logo" />
 
         <ul>
           <li>

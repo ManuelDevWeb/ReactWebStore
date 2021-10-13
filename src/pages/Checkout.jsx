@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Importando componentes
-import {OrderItem} from '../components/OrderItem';
+import {OrderItem} from '@components/OrderItem';
 
 // Importando estilos
-import '../styles/Checkout.scss';
+import '@styles/Checkout.scss';
 
 const Checkout = () => {
     return (  

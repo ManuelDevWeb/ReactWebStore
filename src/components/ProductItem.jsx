@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Importando estilos
-import '../styles/ProductItem.scss';
+import '@styles/ProductItem.scss';
 
 // Importando imágenes
-import imgAdd from '../assets/icons/bt_add_to_cart.svg';
+import imgAdd from '@icons/bt_add_to_cart.svg';
 
 const ProductItem = () => {
     return (  

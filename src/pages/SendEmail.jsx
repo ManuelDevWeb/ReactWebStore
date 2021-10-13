@@ -1,11 +1,11 @@
 import React from 'react';
 
 // Importando estilos
-import '../styles/SendEmail.scss';
+import '@styles/SendEmail.scss';
 
 // Importando imágenes
-import logo from '../assets/logos/logo_yard_sale.svg';
-import imgEmail from '../assets/icons/email.svg';
+import logo from '@logos/logo_yard_sale.svg';
+import imgEmail from '@icons/email.svg';
 
 const SendEmail = () => {
     return ( 

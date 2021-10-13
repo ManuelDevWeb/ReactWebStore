@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Importando estilos
-import '../styles/OrderItem.scss';
+import '@styles/OrderItem.scss';
 
 // Importando imágenes
-import imgClose from '../assets/icons/icon_close.png';
+import imgClose from '@icons/icon_close.png';
 
 const OrderItem = () => {
     return (  

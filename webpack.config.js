@@ -21,7 +21,16 @@ module.exports = {
     mode: 'development',
     // extensión de archivos a tomar en cuenta
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        // alias de nuestras rutas de archivos
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@pages': path.resolve(__dirname, 'src/pages/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/')
+        }
     },
     module: {
         // reglas
@@ -56,13 +65,7 @@ module.exports = {
             {
                 // extensiones de imagenes
                 test: /\.(png|jp(e*)g|svg|gif)$/,
-                use: [{
-                    // indicamos los loaders a usar
-                    loader: 'file-loader',
-                    options: {
-                        name: 'images/[hash]-[name].[ext]',
-                    },
-                }, ],
+                type: 'asset'
             }
         ]
     },

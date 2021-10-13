@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Importando estilos
-import '../styles/NotFound.scss';
+import '@styles/NotFound.scss';
 
 // Importando imágenes
-import imgNotFound from '../assets/logos/404Error.gif';
+import imgNotFound from '@logos/404Error.gif';
 
 const NotFound = () => {
     return (  

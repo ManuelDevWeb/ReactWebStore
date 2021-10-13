@@ -1,7 +1,7 @@
 import React from "react";
 
 // Importando estilos
-import "../styles/Login.scss";
+import "@styles/Login.scss";
 
 const Login = () => {
   return (

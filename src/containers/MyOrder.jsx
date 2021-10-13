@@ -1,13 +1,13 @@
 import React from 'react';
 
 // Importando componentes
-import {OrderItem} from '../components/OrderItem';
+import {OrderItem} from '@components/OrderItem';
 
 // Importando estilos
-import '../styles/MyOrder.scss';
+import '@styles/MyOrder.scss';
 
 // Importando imágenes
-import imgArrow from '../assets/icons/flechita.svg';
+import imgArrow from '@icons/flechita.svg';
 
 const MyOrder = () => {
     return (  

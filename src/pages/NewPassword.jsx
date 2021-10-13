@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Importando estilos
-import '../styles/NewPassword.scss';
+import '@styles/NewPassword.scss';
 
 // Importando imágenes
-import logo from '../assets/logos/logo_yard_sale.svg';
+import logo from '@logos/logo_yard_sale.svg';
 
 const NewPassword = () => {
     return (  
