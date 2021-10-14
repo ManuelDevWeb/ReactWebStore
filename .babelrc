@@ -5,5 +5,8 @@
         "@babel/preset-env",
         /* Permite trabajar con JSX */
         "@babel/preset-react"
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime"
     ]
 }
