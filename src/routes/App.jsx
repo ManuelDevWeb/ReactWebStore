@@ -1,27 +1,35 @@
 import React from "react";
-
 // Importando React router
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+// Importando context
+import {AppContext} from "@context/AppContext";
+// Importando custom hooks
+import {useInitialState} from "@hooks/useInitialState";
 
 // Importando componentes
-import { Layout } from "../containers/Layout";
-import { Home } from "../pages/Home";
-import { Login } from "../pages/Login";
-import { RecoveryPassword } from "../pages/RecoveryPassword";
-import { SendEmail } from "../pages/SendEmail";
-import { NewPassword } from "../pages/NewPassword";
-import { MyAccount } from "../pages/MyAccount";
-import { CreateAccount } from "../pages/CreateAccount";
-import { Checkout } from "../pages/Checkout";
-import { Orders } from "../pages/Orders";
-import { NotFound } from "../pages/NotFound";
+import { Layout } from "@containers/Layout";
+import { Home } from "@pages/Home";
+import { Login } from "@pages/Login";
+import { RecoveryPassword } from "@pages/RecoveryPassword";
+import { SendEmail } from "@pages/SendEmail";
+import { NewPassword } from "@pages/NewPassword";
+import { MyAccount } from "@pages/MyAccount";
+import { CreateAccount } from "@pages/CreateAccount";
+import { Checkout } from "@pages/Checkout";
+import { Orders } from "@pages/Orders";
+import { NotFound } from "@pages/NotFound";
+
+
 
 // Importando estilos
 import "../styles/global.css";
 
 const App = () => {
+  const initialState=useInitialState();
   return (
-    /* Permitiendo implementar router en el navegador */
+    // Conectando nuestra App al context
+    <AppContext.Provider value={initialState}>
+    {/* Permitiendo implementar router en el navegador */}
     <BrowserRouter>
       <Layout>
         {/* Regresa la primera ruta que coincida. */}
@@ -40,6 +48,7 @@ const App = () => {
         </Switch>
       </Layout>
     </BrowserRouter>
+    </AppContext.Provider>
   );
 };
 

@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
+// Importando context
+import {AppContext} from '@context/AppContext';
 
 // Importando componentes
 import {Menu} from "@components/Menu";
@@ -12,6 +15,9 @@ import imgShopping from "@icons/icon_shopping_cart.svg";
 import logo from "@logos/logo_yard_sale.svg";
 
 const Header = () => {
+  // Destructurando elementos a utilizar del context
+  const {state:{cart}}=useContext(AppContext);
+
   // Manejando el estado del toggle para alternar el menu
   const [toggle, setToggle] = useState(false);
 
@@ -56,7 +62,7 @@ const Header = () => {
           </li>
           <li className="navbar-shopping-cart">
             <img src={imgShopping} alt="shopping cart" />
-            <div>2</div>
+            {cart.length > 0 ? <div>{cart.length}</div> : null}
           </li>
         </ul>
       </div>

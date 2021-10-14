@@ -21,7 +21,7 @@ const ProductList = () => {
 		  {
 			  // Iterando sobre los productos
 			  products.map((product)=>(
-				<ProductItem key={product.title} {...product}/>
+				<ProductItem key={product.id} product={product}/>
 			  ))
 		  }
       </div>
