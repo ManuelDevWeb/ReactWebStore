@@ -1,4 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
+
+// Importando context
+import {AppContext} from '@context/AppContext';
 
 // Importando estilos
 import '@styles/OrderItem.scss';
@@ -6,15 +9,25 @@ import '@styles/OrderItem.scss';
 // Importando imágenes
 import imgClose from '@icons/icon_close.png';
 
-const OrderItem = () => {
+const OrderItem = ({product}) => {
+	const {title, price, images}=product;
+
+	// Destructurando elementos a utilizar del context
+	const {removeFromCart}=useContext(AppContext);
+
+	// Función para eliminar productos de la orden cuando demos click en el icono de la X
+	const handleRemove=(product)=>{
+		removeFromCart(product);
+	}
+
     return (  
         <div className="OrderItem">
 			<figure>
-				<img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike" />
+				<img src={images[0]} alt={title} />
 			</figure>
-			<p>Bike</p>
-			<p>$30,00</p>
-			<img src={imgClose} alt="close" />
+			<p>{title}</p>
+			<p>${price}</p>
+			<img src={imgClose} alt="close" onClick={()=>handleRemove(product)} />
 		</div>
     );
 }
