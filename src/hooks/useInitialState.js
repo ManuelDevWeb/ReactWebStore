@@ -25,7 +25,7 @@ const useInitialState = () => {
             // Conservando la información que hay en initialState
             ...state,
             // Filtrando los items por id y asi poder guardar solo los que no coincidan con el id del producto a eliminar
-            cart: state.cart.filter((items) => items.id !== payload.id);
+            cart: state.cart.filter((items) => items.id !== payload.id)
         })
     }
 
